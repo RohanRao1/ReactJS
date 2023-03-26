@@ -4,6 +4,7 @@ import Card from "../UI/Card";
 import "./Expenses.css";
 import ExpenseFilter from "./ExpenseFilter";
 import ExpenseList from "./ExpenseList";
+import ExpensesChart from './ExpensesChart'
 
 const Expenses = (props) => {
   //console.log("this is expense.js");
@@ -29,6 +30,7 @@ const Expenses = (props) => {
       {/* {filteredExpenses.length === 0 ? <p>no expenses</p> : filteredExpenses.map((expense) => (
         <ExpenseItem key={expense.id} title={expense.title} amount={expense.amount} date = {expense.date} />
       ))} */}
+      <ExpensesChart expenses = {filteredExpenses} />
       <ExpenseList items={filteredExpenses} />
     </Card>
   );
